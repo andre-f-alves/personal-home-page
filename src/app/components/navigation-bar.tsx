@@ -2,8 +2,8 @@ import NavigationLink from "./navigation-link";
 
 export default function NavigationBar() {
   return (
-    <nav className="inline-block w-full">
-      <ul className="flex justify-around items-center h-full">
+    <nav className="inline-block">
+      <ul className="h-full">
         <li>
           <NavigationLink href="#home">Início</NavigationLink>
         </li>

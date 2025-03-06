@@ -5,9 +5,3 @@ body {
   background: var(--background);
   font-family: var(--font-red-hat-display), sans-serif;
 }
-
-body > * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
