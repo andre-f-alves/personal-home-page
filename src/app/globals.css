@@ -1,7 +1,11 @@
 @import "tailwindcss";
 
+@theme {
+  --mobile-navbar-height: calc(100vh - 60px);
+}
+
 body {
+  font-family: var(--font-red-hat-display), sans-serif;
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-red-hat-display), sans-serif;
 }

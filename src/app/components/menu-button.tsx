@@ -1,18 +1,34 @@
-export default function MenuButton() {
+export default function MenuButton({
+  handleClick
+}: {
+  handleClick: () => void
+}) {
   return (
-    <button type="button" title="Menu">
+    <button
+      type="button"
+      title="Menu"
+      onClick={handleClick}
+      className="group p-[8px] hover:bg-[#ff6a00]"
+    >
       <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-8 w-8"
-        fill="none"
+        width="32"
+        height="32"
+        version="1.1"
         viewBox="0 0 24 24"
-        stroke="#ff6a00"
-        strokeWidth="2"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <line x1="3" y1="6" x2="21" y2="6" />
-        <line x1="3" y1="12" x2="21" y2="12" />
-        <line x1="3" y1="18" x2="21" y2="18" />
+        <g
+          fill="none"
+          stroke="#ff6a00"
+          strokeLinecap="square"
+          strokeWidth="2"
+          className="group-hover:stroke-white"
+        >
+          <path id="top-line" d="m4 6h16"/>
+          <path id="middle-line" d="m4.0001 12h16"/>
+          <path id="line-bottom" d="m4.0001 18h16"/>
+        </g>
       </svg>
     </button>
   );
-}
+};
