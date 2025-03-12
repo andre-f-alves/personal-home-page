@@ -9,3 +9,7 @@ body {
   color: var(--foreground);
   background: var(--background);
 }
+
+path {
+  transform-box: fill-box;
+}

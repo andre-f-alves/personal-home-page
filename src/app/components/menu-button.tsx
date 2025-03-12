@@ -1,8 +1,12 @@
+interface MenuButtonProps {
+  handleClick: () => void;
+  isMenuOpen: boolean;
+}
+
 export default function MenuButton({
-  handleClick
-}: {
-  handleClick: () => void
-}) {
+  handleClick,
+  isMenuOpen,
+}: Readonly<MenuButtonProps>) {
   return (
     <button
       type="button"
@@ -24,9 +28,9 @@ export default function MenuButton({
           strokeWidth="2"
           className="group-hover:stroke-white"
         >
-          <path id="top-line" d="m4 6h16"/>
-          <path id="middle-line" d="m4.0001 12h16"/>
-          <path id="line-bottom" d="m4.0001 18h16"/>
+          <path id="top-line" d="m4 6h16" className={isMenuOpen ? "origin-center rotate-45 translate-y-[6px]" : ""}/>
+          <path id="middle-line" d="m4.0001 12h16" className={isMenuOpen ? "hidden" : ""}/>
+          <path id="line-bottom" d="m4.0001 18h16" className={isMenuOpen ? "origin-center -rotate-45 -translate-y-[6px]" : ""}/>
         </g>
       </svg>
     </button>

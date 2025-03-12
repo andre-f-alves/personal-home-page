@@ -16,8 +16,8 @@ export default function Header() {
         &lt;André<br />&nbsp;&nbsp;Alves/&gt;
       </span>
 
-      <MenuButton handleClick={toggleMenu} />
-      <NavBar isMenuOpen={isMenuOpen} />
+      <MenuButton handleClick={toggleMenu} isMenuOpen={isMenuOpen}/>
+      <NavBar isMenuOpen={isMenuOpen}/>
     </header>
   );
 };
