@@ -1,5 +1,3 @@
-import { url } from "inspector"
-
 export default function HomeSection() {
   return (
     <section id="home" className="w-full h-(--screen-height) bg-[url(/imgs/bg-img.jpg)] bg-cover bg-left-top">
