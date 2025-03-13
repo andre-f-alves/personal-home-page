@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --mobile-navbar-height: calc(100vh - 60px);
+  --screen-height: calc(100vh - 60px); 
 }
 
 body {

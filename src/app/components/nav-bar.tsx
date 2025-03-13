@@ -1,25 +1,23 @@
-import NavLink from "./nav-link";
+import NavLink from "./nav-link"
+
+interface NavBarProps {
+  links: Array<{ href: string, text: string }>
+  isMenuOpen: boolean
+}
 
 export default function NavBar({
-  isMenuOpen
-}: {
-  isMenuOpen: boolean
-}) {
+  links,
+  isMenuOpen,
+}: Readonly<NavBarProps>) {
   return (
-    <nav className={`fixed top-[60px] right-0 w-[50vw] h-(--mobile-navbar-height) ${isMenuOpen ? "translate-x-0" : "translate-x-full"} bg-gray-200`}>
-      <ul className="flex flex-col justify-around items-center h-full">
-        <li>
-          <NavLink href="#home">Início</NavLink>
-        </li>
-
-        <li>
-          <NavLink href="#technologies">Tecnologias</NavLink>
-        </li>
-
-        <li>
-          <NavLink href="#projects">Projetos</NavLink>
-        </li>
+    <nav className={`fixed top-[60px] right-0 w-[50vw] h-(--screen-height) transition-transform duration-500 ease-in-out ${isMenuOpen ? "translate-x-0" : "translate-x-full"} bg-gray-200`}>
+      <ul className="flex flex-col justify-around items-center h-full list-none">
+        {links.map(({ href, text }, index) => (
+          <li key={index} className="text-center">
+            <NavLink href={href}>{text}</NavLink>
+          </li>
+        ))}
       </ul>
     </nav>
-  );
-};
+  )
+}

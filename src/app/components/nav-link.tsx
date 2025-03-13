@@ -1,6 +1,6 @@
 interface NavLinkProps {
-  href: string;
-  children: React.ReactNode;
+  href: string
+  children: React.ReactNode
 }
 
 export default function NavLink({
@@ -8,6 +8,6 @@ export default function NavLink({
   children,
 }: Readonly<NavLinkProps>) {
   return (
-    <a href={href} className="hover:text-[#ff6a00] hover:font-bold hover:underline hover:decoration-3">{children}</a>
-  );
+    <a href={href} className="hover:text-[#ff6a00] hover:font-bold hover:border-b-[3px]">{children}</a>
+  )
 }
