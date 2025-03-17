@@ -31,9 +31,15 @@ export default function HomeSection() {
             <ContactLinks />
           </div>
 
-          <div className="w-[24px] h-[48px] flex justify-center">
-            <div className="size-[4px] rounded bg-gray-500 animate-(--scroll-animation)"></div>
-          </div>
+          {/* <div className="size-max">
+            <svg width="48" height="48" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" stroke="#888" strokeWidth="2" strokeLinecap="square">
+                <path id="top-arrow" d="m5.4132 3.0441 6.5868 6.095 6.5868-6.095" className="animate-[bounce_1.2s_infinite]"/>
+                <path id="middle-arrow" d="m5.4131 9.0448 6.5869 6.0937 6.5869-6.0937" className="animate-[bounce_1.2s_infinite_200ms]"/>
+                <path id="bottom-arrow" d="m5.4131 15.044 6.5869 6.0937 6.5869-6.0937" className="animate-[bounce_1.2s_infinite_400ms]"/>
+              </g>
+            </svg>
+          </div> */}
         </div>
       </div>
     </section>

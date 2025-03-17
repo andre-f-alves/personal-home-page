@@ -2,7 +2,6 @@
 
 @theme {
   --screen-height: calc(100vh - 60px);
-  --scroll-animation: 1300ms ease-in-out infinite slide-up;
 }
 
 body {
@@ -13,20 +12,4 @@ body {
 
 path {
   transform-box: fill-box;
-}
-
-@keyframes slide-up {
-  0% {
-    align-self: flex-end;
-    height: 4px;
-  }
-
-  50% {
-    height: 100%;
-  }
-
-  100% {
-    align-self: flex-start;
-    height: 4px;
-  }
 }
