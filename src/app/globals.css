@@ -1,13 +1,21 @@
 @import "tailwindcss";
 
+:root {
+  --background: radial-gradient(circle at top, #fff, #d0d0d0);
+  --foreground: #000;
+
+  --brand-color: #ff6a00;
+}
+
 @theme {
-  --screen-height: calc(100vh - 60px);
+  --color-brand: #ff6a00;
 }
 
 body {
+  height: 100dvh;
   font-family: var(--font-red-hat-display), sans-serif;
   color: var(--foreground);
-  background: var(--background);
+  background: var(--background) no-repeat;
 }
 
 path {
