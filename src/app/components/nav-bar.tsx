@@ -1,23 +1,51 @@
-import NavLink from "./nav-link"
+"use client"
 
-interface NavBarProps {
-  links: Array<{ href: string, text: string }>
-  isMenuOpen: boolean
-}
+import { useState, useEffect } from "react"
 
-export default function NavBar({
-  links,
-  isMenuOpen,
-}: Readonly<NavBarProps>) {
+import NavMenu from "./nav-menu"
+import MobileNavMenu from "./mobile-nav-menu"
+import MenuButton from "./menu-button"
+
+const links = [
+  { href: "#home", text: "Início" },
+  { href: "#projects", text: "Projetos" },
+  { href: "#contact", text: "Contato" },
+]
+
+const menuItems = links.map(({ href, text }, index) => (
+  <li key={index} className="text-center">
+    <a href={href} className="font-semibold hover:text-brand hover:border-b-[2px] border-brand transition-[color] duration-200 ease-in-out">{text}</a>
+  </li>
+))
+
+export default function NavBar() {
+  const [ isMenuOpen, setIsMenuOpen ] = useState<boolean>(false)
+  const [ isSmallScreen, setIsSmallScreen ] = useState<boolean>(true)
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < 768)
+      setIsMenuOpen(false)
+    }
+
+    handleResize()
+    window.addEventListener('resize', handleResize)
+
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
+
   return (
-    <nav className={`fixed top-0 right-0 w-[50vw] h-full pt-[80px] transition-transform duration-500 ease-in-out ${isMenuOpen ? "translate-x-0" : "translate-x-full"} bg-gray-200`}>
-      <ul className="flex flex-col justify-around items-center gap-[48px] list-none">
-        {links.map(({ href, text }, index) => (
-          <li key={index} className="text-center">
-            <NavLink href={href}>{text}</NavLink>
-          </li>
-        ))}
-      </ul>
+    <nav>
+      {
+        isSmallScreen ?
+        <>
+          <MenuButton handleClick={toggleMenu} isMenuOpen={isMenuOpen} />
+          <MobileNavMenu isMenuOpen={isMenuOpen}>{menuItems}</MobileNavMenu>
+        </> :
+        <NavMenu>{menuItems}</NavMenu>
+      }
     </nav>
   )
 }

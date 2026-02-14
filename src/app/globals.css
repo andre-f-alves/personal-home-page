@@ -8,6 +8,8 @@
 }
 
 @theme {
+  --text-title: clamp(1.5rem, 4vw, 3rem);
+  --text-headline: clamp(1rem, 2.5vw, 2rem);
   --color-brand: #ff6a00;
 }
 

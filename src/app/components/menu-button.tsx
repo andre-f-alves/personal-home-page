@@ -1,4 +1,4 @@
-interface MenuButtonProps {
+type MenuButtonProps = {
   handleClick: () => void
   isMenuOpen: boolean
 }
@@ -12,7 +12,7 @@ export default function MenuButton({
       type="button"
       title="Menu"
       onClick={handleClick}
-      className="group z-1 p-[3px] rounded-[8px] cursor-pointer hover:bg-brand"
+      className="group p-[3px] rounded-[8px] cursor-pointer hover:bg-brand"
     >
       <svg
         width="32"
