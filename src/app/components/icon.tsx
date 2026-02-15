@@ -10,6 +10,6 @@ export default function Icon({
   size = 24
 }: Readonly<IconProps>) {
   return (
-    <Image src={`icons/${icon}.svg`} alt="#" width={size} height={size} className={`size-[${size}px]`} />
+    <Image src={`icons/${icon}.svg`} alt="#" width={size} height={size} className={`size-[${size}px] aspect-square`} />
   )
 }

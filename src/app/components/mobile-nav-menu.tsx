@@ -17,13 +17,12 @@ export default function MobileNavMenu({
     const header = document.querySelector("header")
     if (header) {
       const headerHeight = header.getBoundingClientRect().height
-      console.log(headerHeight)
       topRef.current = headerHeight
     }
   })
 
   return (
-    <div className={`fixed top-[${topRef.current}px] bottom-0 right-0 p-[1rem_15vw] transition-transform duration-500 ease-in-out ${isMenuOpen ? "translate-x-0" : "translate-x-full"} bg-gray-200`}>
+    <div style={{ top: `${topRef.current}px` }} className={`fixed right-0 bottom-0 p-[2rem_15vw] transition-transform duration-500 ease-in-out ${isMenuOpen ? "translate-x-0" : "translate-x-full"} bg-header-color`}>
       <ul className="flex flex-col items-center gap-[3rem] list-none">
         {children}
       </ul>

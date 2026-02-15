@@ -2,7 +2,7 @@ import NavBar from "./nav-bar"
 
 export default function Header() {
   return (
-    <header className="sticky top-0 left-0 z-10 p-[16px_24px] flex justify-between items-center max-w-[120rem] mx-auto bg-gray-200">
+    <header className="sticky z-10 top-0 left-0 flex justify-between items-center max-w-[120rem] mx-auto p-[1rem_2rem] md:p-[1rem_4rem] bg-header-color">
       <span className="font-[Consolas] text-[1.25rem] text-brand leading-none">
         &lt;André<br />&nbsp;&nbsp;Alves/&gt;
       </span>

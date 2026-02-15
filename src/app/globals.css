@@ -4,20 +4,42 @@
   --background: radial-gradient(circle at top, #fff, #d0d0d0);
   --foreground: #000;
 
+  --header-color: #fff;
+
+  --title-color: #000;
+
   --brand-color: #ff6a00;
+  --hover-color: #ff8833;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: radial-gradient(circle at top, #2b2b2b, #0f0f0f);
+    --foreground: #eeeeee;
+
+    --header-color: #2b2b2b;
+
+    --title-color: #fff;
+  }
 }
 
 @theme {
-  --text-title: clamp(1.5rem, 4vw, 3rem);
-  --text-headline: clamp(1rem, 2.5vw, 2rem);
-  --color-brand: #ff6a00;
+  --text-title: clamp(1.4rem, 4vw, 2.7rem);
+  --text-headline: clamp(1rem, 2vw, 1.6rem);
+
+  --color-header-color: var(--header-color);
+  --color-title-color: var(--title-color);
+
+  --color-brand: var(--brand-color);
+  --color-hover: var(--hover-color);
 }
 
 body {
+  position: relative;
   height: 100dvh;
   font-family: var(--font-red-hat-display), sans-serif;
   color: var(--foreground);
-  background: var(--background) no-repeat;
+  background: var(--background);
 }
 
 path {

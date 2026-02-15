@@ -2,7 +2,7 @@ import Icon from "./icon"
 
 export default function ContactLinks() {
   return (
-    <ul className="flex justify-around items-center md:gap-[24px] w-[80%] md:w-max list-none">
+    <ul className="flex justify-evenly items-center md:gap-[3vw] lg:gap-[2rem] w-full list-none">
       <li>
         <a href="https://github.com/andre-f-alves" target="_blank" rel="noopener noreferrer">
           <Icon icon="github" />
