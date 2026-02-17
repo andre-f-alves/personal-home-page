@@ -3,7 +3,7 @@ import ContactLinks from "./contact-links"
 export default function HomeSection() {
   return (
     <section id="home" className="w-full h-full">
-      <div className="max-w-7xl h-full p-[3rem_1.5rem] md:p-[6rem_3rem] lg:px-20 mx-auto rounded-4xl backdrop-blur-sm bg-white/30">
+      <div className="max-w-7xl h-full p-[3rem_1.5rem] md:p-[6rem_3rem] lg:px-20 mx-auto rounded-4xl bg-gray-500/5 border-1 border-gray-500/15 shadow-sm">
         <div className="flex flex-col justify-center items-center md:items-start gap-[3rem] h-full text-center md:text-left">
 
           <div className="w-full flex flex-col items-center md:items-start gap-[.8rem]">

@@ -34,9 +34,13 @@
   --color-hover: var(--hover-color);
 }
 
+html, body {
+  height: 100dvh;
+  overflow: hidden;
+}
+
 body {
   position: relative;
-  height: 100dvh;
   font-family: var(--font-red-hat-display), sans-serif;
   color: var(--foreground);
   background: var(--background);

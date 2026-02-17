@@ -14,7 +14,7 @@ const links = [
 
 const menuItems = links.map(({ href, text }, index) => (
   <li key={index} className="text-center">
-    <a href={href} className="font-semibold hover:text-brand hover:border-b-[2px] border-brand transition-[color] duration-200 ease-in-out">{text}</a>
+    <a href={href} className="font-semibold hover:text-brand border-b-[2px] border-transparent hover:border-brand transition-[color, border] duration-200 ease-in-out">{text}</a>
   </li>
 ))
 
