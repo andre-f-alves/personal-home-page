@@ -1,37 +1,34 @@
 import Icon from "./icon"
 
+interface ContactLinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+  icon: string
+}
+
+const links: ContactLinkProps[] = [
+  { href: "https://github.com/andre-f-alves", icon: "mdi:github", target: "_blank" },
+  { href: "https://linkedin.com/in/andré-alves-85ab73249", icon: "mdi:linkedin", target: "_blank" },
+  { href: "#", icon: "mdi:whatsapp", target: "_blank" },
+  { href: "#", icon: "mdi:email-outline" }
+]
+
+function ContactLink({ icon, ...props }: Readonly<ContactLinkProps>) {
+  return (
+    <li>
+      <a { ...props }>
+        <Icon icon={icon} height={24} className="text-current" />
+      </a>
+    </li>
+  )
+}
+
 export default function ContactLinks() {
   return (
     <ul className="flex justify-evenly items-center md:gap-[3vw] lg:gap-[2rem] w-full list-none">
-      <li>
-        <a href="https://github.com/andre-f-alves" target="_blank" rel="noopener noreferrer">
-          <Icon icon="github" />
-        </a>
-      </li>
-
-      <li>
-        <a href="http://www.linkedin.com/in/andré-alves-85ab73249">
-          <Icon icon="linkedin" />
-        </a>
-      </li>
-
-      <li>
-        <a href="#">
-          <Icon icon="whatsapp" />
-        </a>
-      </li>
-
-      <li>
-        <a href="mailto:andre.fortes.alves06@gmail.com">
-          <Icon icon="email" />
-        </a>
-      </li>
-
-      <li>
-        <a href="#">
-          <Icon icon="cv" />
-        </a>
-      </li>
+      {
+        links.map((link, index) => (
+          <ContactLink key={index} { ...link } />
+        ))
+      }
     </ul>
   )
 }

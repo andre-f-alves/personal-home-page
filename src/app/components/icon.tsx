@@ -1,15 +1,9 @@
-import Image from "next/image"
+"use client"
 
-type IconProps = {
-  icon: string
-  size?: number
-}
+import { Icon as Iconify, IconProps } from "@iconify/react"
 
-export default function Icon({
-  icon,
-  size = 24
-}: Readonly<IconProps>) {
+export default function Icon(props: IconProps) {
   return (
-    <Image src={`icons/${icon}.svg`} alt="#" width={size} height={size} className={`size-[${size}px] aspect-square`} />
+    <Iconify { ...props } />
   )
 }
