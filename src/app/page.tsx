@@ -1,6 +1,7 @@
 import Background from "./components/background"
 import Header from "./components/header"
 import HomeSection from "./components/home-section"
+import ProjectsSection from "./components/projects-section"
 
 export default function Home() {
   return (
@@ -11,8 +12,9 @@ export default function Home() {
         <Header />
       </div>
 
-      <main className="relative max-w-[110rem] mx-auto">
+      <main className="relative flex flex-col gap-30 max-w-[120rem] mx-auto">
         <HomeSection />
+        <ProjectsSection />
       </main>
     </>
   )

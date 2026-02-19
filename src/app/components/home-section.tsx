@@ -2,9 +2,9 @@ import ContactLinks from "./contact-links"
 
 export default function HomeSection() {
   return (
-    <section id="home" className="w-full h-full">
+    <section id="home" className="w-full">
 
-      <div className="max-w-7xl h-full p-[3rem_1.5rem] md:p-[6rem_3rem] lg:px-20 mx-auto xl:rounded-4xl bg-gray-500/5 border-1 border-gray-500/15 backdrop-blur-md shadow-sm">
+      <div className="max-w-7xl p-[3rem_1.5rem] md:p-[6rem_3rem] lg:px-20 mx-auto xl:rounded-4xl bg-gray-500/5 border-1 border-gray-500/15 backdrop-blur-md shadow-sm">
         
         <div className="flex flex-col justify-center items-center md:items-start gap-[3rem] h-full text-center md:text-left">
 

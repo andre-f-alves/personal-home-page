@@ -4,7 +4,7 @@
   --background: radial-gradient(circle at top, #fff, #d0d0d0);
   --foreground: #000;
 
-  --header-color: hsl(0, 0%, 96%);
+  --header-color: hsl(0, 0%, 98%);
 
   --title-color: #000;
 
@@ -26,6 +26,9 @@
 @theme {
   --text-title: clamp(1.4rem, 4vw, 2.7rem);
   --text-headline: clamp(1rem, 2vw, 1.6rem);
+
+  --text-h2: 1.7rem;
+  --text-h3: 1.3rem;
 
   --color-header-color: var(--header-color);
   --color-title-color: var(--title-color);

@@ -14,7 +14,7 @@ const links: ContactLinkProps[] = [
 function ContactLink({ icon, ...props }: Readonly<ContactLinkProps>) {
   return (
     <li>
-      <a { ...props }>
+      <a { ...props } className="hover:text-hover">
         <Icon icon={icon} height={24} className="text-current" />
       </a>
     </li>
