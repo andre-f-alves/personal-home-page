@@ -1,6 +1,6 @@
 export default function Background() {
   return (
-    <div className="absolute top-0 left-0 w-full h-full">
+    <div className="absolute -z-10 inset-0">
       <svg viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
         <path d="M1858 820.5L1814.25 896.277H1726.75L1683 820.5L1726.75 744.723H1814.25L1858 820.5Z" fill="#FF6A00" />
         <path d="M2030 820L1900 1045.17H1640L1510 820L1640 594.833H1900L2030 820Z" stroke="url(#paint0_linear_2035_10)" strokeWidth="5" />

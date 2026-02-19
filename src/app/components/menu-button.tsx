@@ -23,7 +23,7 @@ export default function MenuButton({
         className="m-auto"
       >
         <g
-          strokeLinecap="square"
+          strokeLinecap="round"
           strokeWidth="2"
           className="group-hover:stroke-white fill-none stroke-brand"
         >

@@ -1,15 +1,19 @@
 import Background from "./components/background"
 import Header from "./components/header"
-import Main from "./components/main"
+import HomeSection from "./components/home-section"
 
 export default function Home() {
   return (
     <>
       <Background />
-      <div className="w-full bg-header-color backdrop-blur-[5px]">
+      
+      <div className="sticky z-50 top-0 left-0 w-full bg-header-color">
         <Header />
       </div>
-      <Main />
+
+      <main className="relative max-w-[110rem] mx-auto">
+        <HomeSection />
+      </main>
     </>
   )
 }
