@@ -4,11 +4,14 @@ interface ContactLinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement>
   icon: string
 }
 
+const RECIPIENT = "andre.fortes.alves06@gmail.com"
+const WHATSAPP_NUMBER = "5513997866588"
+
 const links: ContactLinkProps[] = [
   { href: "https://github.com/andre-f-alves", icon: "mdi:github", target: "_blank" },
   { href: "https://linkedin.com/in/andré-alves-85ab73249", icon: "mdi:linkedin", target: "_blank" },
-  { href: "#", icon: "mdi:whatsapp", target: "_blank" },
-  { href: "#", icon: "mdi:email-outline" }
+  { href: `https://wa.me/${WHATSAPP_NUMBER}`, icon: "mdi:whatsapp", target: "_blank" },
+  { href: `mailto:${RECIPIENT}`, icon: "mdi:email-outline" }
 ]
 
 function ContactLink({ icon, ...props }: Readonly<ContactLinkProps>) {
