@@ -7,8 +7,10 @@ export default function ProjectsSection() {
       <div className="flex flex-wrap justify-center gap-8 max-w-max mx-auto">
         <ProjectCard
           title="Snake Game"
-          description="Jogo Snake clássico desenvolvido com JavaScript, HTML e CSS."
-          imageSrc="/imgs/snake-project.jpeg" />
+          description="Jogo Snake clássico desenvolvido para navegadores com opção para download e uso offline."
+          technologies={["JavaScript", "HTML", "CSS"]}
+          imageSrc="/imgs/snake-screenshot.jpeg"
+          href="#projects" />
       </div>
     </Section>
   )

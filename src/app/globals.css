@@ -4,7 +4,7 @@
   --background: radial-gradient(circle at top, #fff, #d0d0d0);
   --foreground: #000;
 
-  --header-footer-color: hsl(0, 0%, 98%);
+  --panel-color: hsl(0, 0%, 98%);
 
   --title-color: #000;
 
@@ -17,7 +17,7 @@
     --background: radial-gradient(circle at top, #2b2b2b, #0f0f0f);
     --foreground: #eeeeee;
 
-    --header-footer-color: #2b2b2b;
+    --panel-color: #2b2b2b;
 
     --title-color: #fff;
   }
@@ -30,7 +30,7 @@
   --text-h2: 1.7rem;
   --text-h3: 1.3rem;
 
-  --color-header-footer-color: var(--header-footer-color);
+  --color-panel-color: var(--panel-color);
   --color-title-color: var(--title-color);
 
   --color-brand: var(--brand-color);
