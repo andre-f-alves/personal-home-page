@@ -4,7 +4,7 @@ import Icon from "./icon"
 
 function TechLabel({ technology }: { technology: string }) {
   return (
-    <li className="grid grid-cols-[auto_1fr] items-center gap-2 px-6 py-2 rounded-full text-sm bg-panel-color shadow-md">
+    <li className="grid grid-cols-[auto_1fr] items-center gap-2 px-6 py-2 rounded-full text-sm bg-panel-color shadow-[0_1px_2px_1px_rgba(0,0,0,0.1)] cursor-default hover:scale-103 hover:shadow-[0_2px_5px_1px_rgba(0,0,0,0.075)] transition-all duration-200 ease-in-out">
       <Icon icon={`material-icon-theme:${technology.toLowerCase()}`} height={20} />
       <span>{technology}</span>
     </li>
