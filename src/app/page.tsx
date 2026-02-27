@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <Background />
       
-      <div className="sticky z-50 top-0 left-0 w-full bg-header-color">
+      <div className="sticky z-50 top-0 left-0 w-full bg-panel-color shadow-md">
         <Header />
       </div>
 
