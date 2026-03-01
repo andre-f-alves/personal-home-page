@@ -10,7 +10,8 @@ export default function ProjectsSection() {
           description="Jogo Snake clássico desenvolvido para navegadores com opção para download e uso offline."
           technologies={["JavaScript", "HTML", "CSS"]}
           imageSrc="/imgs/snake-screenshot.jpeg"
-          href="#projects" />
+          projectLink="https://andre-f-alves.github.io/snake/"
+          repositoryLink="https://github.com/andre-f-alves/snake" />
       </div>
     </Section>
   )

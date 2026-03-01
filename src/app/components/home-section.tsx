@@ -27,7 +27,7 @@ export default function HomeSection() {
             </a>
             <a
               href="#contact"
-              className="text-nowrap py-3 px-6 font-bold rounded-full border-2 border-brand text-center leading-none text-brand hover:text-hover hover:border-hover"
+              className="text-nowrap py-3 px-6 font-bold rounded-full border-2 border-brand text-center leading-none text-brand bg-brand/10 hover:bg-hover/10 hover:text-hover hover:border-hover"
             >
               Entrar em contato
             </a>

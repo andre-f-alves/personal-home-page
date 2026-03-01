@@ -16,7 +16,8 @@ type ProjectCardProps = {
   description: string
   technologies: string[]
   imageSrc: string
-  href: string
+  projectLink: string,
+  repositoryLink?: string
 }
 
 export default function ProjectCard({
@@ -24,10 +25,11 @@ export default function ProjectCard({
   description,
   technologies,
   imageSrc,
-  href
+  projectLink,
+  repositoryLink = ""
 }: Readonly<ProjectCardProps>) {
   return (
-    <div className="flex flex-col gap-4 min-w-2xs max-w-90 p-6 rounded-xl bg-panel-color dark:bg-(image:--background) shadow-lg">
+    <div className="flex flex-col gap-4 min-w-2xs max-w-sm p-6 rounded-xl bg-panel-color dark:bg-(image:--background) shadow-lg">
       <div className="w-full aspect-video overflow-y-hidden rounded-xl pt-3 bg-(image:--background) shadow-[inset_0_1px_4px_1px_rgba(0,0,0,0.5)]">
         <Image
           className="rounded-md mx-auto shadow-[0_1px_3px_1px_rgba(0,0,0,0.5)]"
@@ -46,12 +48,28 @@ export default function ProjectCard({
         ))}
       </ul>
       
-      <p>{description}</p>
+      <p className="my-3">{description}</p>
 
-      <Link
-        className="w-max py-2 px-6 rounded-full font-bold bg-brand hover:bg-hover"
-        href={href}
-      >Ver projeto</Link>
+      <div className="flex flex-col md:flex-row gap-4 text-nowrap">
+        <Link
+          className="py-2 px-6 rounded-full border-2 border-brand font-bold text-center bg-brand hover:bg-hover hover:border-hover"
+          href={projectLink}
+          target="_blank"
+        >
+          Ver projeto
+        </Link>
+
+        {repositoryLink && (
+          <Link
+            className="grid grid-cols-[auto_auto] justify-center items-center gap-2 py-2 px-6 border-2 border-brand rounded-full font-bold text-brand bg-brand/10 hover:text-hover hover:border-hover hover:bg-hover/10"
+            href={repositoryLink}
+            target="_blank"
+          >
+            <Icon icon="mdi:github" height={24} color="var(--foreground)" />
+            <span>Ver no GitHub</span>
+          </Link>
+        )}
+      </div>
     </div>
   )
 }
