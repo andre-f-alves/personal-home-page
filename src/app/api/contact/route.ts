@@ -1,5 +1,17 @@
-import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import { NextResponse } from "next/server"
+import nodemailer from "nodemailer"
+
+export const runtime = "nodejs"
+
+const transporter = nodemailer.createTransport({
+  host: process.env.SMTP_HOST,
+  port: Number(process.env.SMTP_PORT),
+  secure: true,
+  auth: {
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PW
+  },
+})
 
 export async function POST(request: Request) {
   try {
@@ -12,16 +24,6 @@ export async function POST(request: Request) {
       )
     }
 
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: Number(process.env.SMTP_PORT),
-      secure: true,
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PW
-      },
-    })
-
     await transporter.sendMail({
       from: `"Portfólio" <${process.env.SMTP_USER}>`,
       to: process.env.RECIPIENT,
@@ -31,7 +33,7 @@ export async function POST(request: Request) {
     })
 
     return NextResponse.json({ success: true })
-  
+
   } catch (error) {
     return NextResponse.json(
       { error: `Erro ao enviar email: ${error}` },
