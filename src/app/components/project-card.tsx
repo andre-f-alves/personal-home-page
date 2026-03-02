@@ -1,11 +1,11 @@
 import Image from "next/image"
 import Link from "next/link"
-import Icon from "./icon"
+import Iconify from "./iconify"
 
 function TechLabel({ technology }: { technology: string }) {
   return (
     <li className="grid grid-cols-[auto_1fr] items-center gap-2 px-6 py-2 rounded-full text-sm bg-panel-color shadow-[0_1px_2px_1px_rgba(0,0,0,0.1)] cursor-default hover:scale-103 hover:shadow-[0_2px_5px_1px_rgba(0,0,0,0.075)] transition-all duration-200 ease-in-out">
-      <Icon icon={`material-icon-theme:${technology.toLowerCase()}`} height={20} />
+      <Iconify icon={`material-icon-theme:${technology.toLowerCase()}`} height={20} />
       <span>{technology}</span>
     </li>
   )
@@ -47,7 +47,7 @@ export default function ProjectCard({
           <TechLabel key={index} technology={tech} />
         ))}
       </ul>
-      
+
       <p className="my-3">{description}</p>
 
       <div className="flex flex-col md:flex-row gap-4 text-nowrap">
@@ -65,7 +65,7 @@ export default function ProjectCard({
             href={repositoryLink}
             target="_blank"
           >
-            <Icon icon="mdi:github" height={24} color="var(--foreground)" />
+            <Iconify icon="mdi:github" height={24} color="var(--foreground)" />
             <span>Ver no GitHub</span>
           </Link>
         )}

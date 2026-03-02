@@ -1,4 +1,4 @@
-import Icon from "./icon"
+import Iconify from "./iconify"
 
 interface ContactLinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   icon: string
@@ -17,8 +17,8 @@ const links: ContactLinkProps[] = [
 function ContactLink({ icon, ...props }: Readonly<ContactLinkProps>) {
   return (
     <li>
-      <a { ...props } className="hover:text-hover">
-        <Icon icon={icon} height={24} className="text-current" />
+      <a {...props} className="hover:text-hover">
+        <Iconify icon={icon} height={24} className="text-current" />
       </a>
     </li>
   )
@@ -29,7 +29,7 @@ export default function ContactLinks() {
     <ul className="flex justify-evenly items-center md:gap-[3vw] lg:gap-[2rem] w-full list-none">
       {
         links.map((link, index) => (
-          <ContactLink key={index} { ...link } />
+          <ContactLink key={index} {...link} />
         ))
       }
     </ul>
